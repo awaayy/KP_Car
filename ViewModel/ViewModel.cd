@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GIBDD.ViewModel.AddCarViewModel">
+    <Position X="6.5" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIRAAAAAQAwAAAAEAAAAAAAAEIgEAAAAgAAAABCAA=</HashCode>
+      <FileName>ViewModel\AddCarViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GIBDD.ViewModel.AuthorizationViewModel">
+    <Position X="21.5" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAAACAAAAQAAAAEAAQAAAAEAAAAAgACAAAQgoAAEIA=</HashCode>
+      <FileName>ViewModel\AuthorizationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GIBDD.ViewModel.CarPageViewModel">
+    <Position X="17.25" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEAABAAIAAQAAAAAAAAUAAAAAACAAEAAgAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\CarPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GIBDD.ViewModel.CarsViewModel">
+    <Position X="11.5" Y="6.5" Width="2" />
+    <AssociationLine Name="Reset" Type="GIBDD.ViewModel.RelayCommand">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.622" Y="2.407" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Add" Type="GIBDD.ViewModel.RelayCommand">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.01" Y="1.244" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Delete" Type="GIBDD.ViewModel.RelayCommand">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.483" Y="0.632" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Watch" Type="GIBDD.ViewModel.RelayCommand">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.24" Y="1.77" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Registration" Type="GIBDD.ViewModel.RelayCommand">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.314" Y="0.205" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EEIBAAAGqAAABggAIQAAASEACAEABAAxgAQAAABGAQA=</HashCode>
+      <FileName>ViewModel\CarsViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Reset" />
+      <Property Name="Add" />
+      <Property Name="Delete" />
+      <Property Name="Watch" />
+      <Property Name="Registration" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GIBDD.ViewModel.DriverLicensesViewModel">
+    <Position X="9" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIIAAAAAAAAAAAAAACAEACQAAAAkBACAAAAAwACCAA=</HashCode>
+      <FileName>ViewModel\DriverLicensesViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Add" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GIBDD.ViewModel.DriversViewModel">
+    <Position X="14.75" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAIAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>ViewModel\DriversViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Add" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GIBDD.ViewModel.EnginesViewModel">
+    <Position X="14.75" Y="10" Width="1.75" />
+    <AssociationLine Name="Add" Type="GIBDD.ViewModel.RelayCommand" ManuallyRouted="true">
+      <Path>
+        <Point X="14.75" Y="11.26" />
+        <Point X="14.412" Y="11.26" Type="JumpStart" />
+        <Point X="14.245" Y="11.26" Type="JumpEnd" />
+        <Point X="14.094" Y="11.26" />
+        <Point X="14.094" Y="3.834" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.848" Y="0.2" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIIAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAACCAA=</HashCode>
+      <FileName>ViewModel\EnginesViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Add" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GIBDD.ViewModel.RegistrationViewModel">
+    <Position X="19.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIAAACAAAAQAAAAEAgQAAAAEAAAABgCSAAAQkoCAEIA=</HashCode>
+      <FileName>ViewModel\RegistrationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GIBDD.ViewModel.RelayCommand">
+    <Position X="13" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GIBDD.ViewModel.UserCabinetViewModel">
+    <Position X="24" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAIAAAICAAAAAAAAAAAAAAAAAAAAQAABAAAA=</HashCode>
+      <FileName>ViewModel\UserCabinetViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GIBDD.ViewModel.VehicleCategory">
+    <Position X="17.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAASAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\VehicleCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GIBDD.ViewModel.ViewModels">
+    <Position X="14.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\ViewModels.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

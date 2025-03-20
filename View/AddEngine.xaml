@@ -1,0 +1,64 @@
+﻿<Window x:Class="GIBDD.View.AddEngine"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GIBDD.View"
+        xmlns:ext="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="Добавить двигатель" Width="400" SizeToContent="Height" ResizeMode="NoResize"
+        ShowInTaskbar="False" WindowStartupLocation="CenterOwner"
+        FontSize="18">
+    <Grid Margin="5">
+        <Grid.Resources>
+            <Style TargetType="TextBox">
+                <Setter Property="Margin" Value="10 0"/>
+                <Setter Property="HorizontalAlignment" Value="Right"/>
+                <Setter Property="MinWidth" Value="200"/>
+            </Style>
+
+            <Style TargetType="DockPanel">
+                <Setter Property="Margin" Value="0 5"/>
+            </Style>
+        </Grid.Resources>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0">
+            <TextBlock Text="Номер"/>
+            <TextBox Text="{Binding NumberEngine}"/>
+        </DockPanel>
+
+        <DockPanel Grid.Row="1">
+            <TextBlock Text="Вид"/>
+            <TextBox Text="{Binding Kind}"/>
+        </DockPanel>
+
+        <DockPanel Grid.Row="2">
+            <TextBlock Text="Объем"/>
+            <TextBox Text="{Binding Capacity}"/>
+        </DockPanel>
+
+        <DockPanel Grid.Row="3">
+            <TextBlock Text="Мощность"/>
+            <TextBox Text="{Binding Power}"/>
+        </DockPanel>
+
+        <DockPanel Grid.Row="4">
+            <TextBlock Text="Крутящий момент"/>
+            <TextBox Text="{Binding Torque}"/>
+        </DockPanel>
+
+        <DockPanel Grid.Row="5" HorizontalAlignment="Center" Margin="10">
+            <Button x:Name="OK" Content="ОК" MinWidth="100" Margin="10 0" IsDefault="True" Click="OK_Click"/>
+            <Button x:Name="Cancel" Content="Отмена" MinWidth="100" Margin="10 0" IsCancel="True"/>
+        </DockPanel>
+    </Grid>
+</Window>

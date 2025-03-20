@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\AdminMode.png" />
+    <None Remove="Images\Car.png" />
+    <None Remove="Images\Registration.png" />
+    <None Remove="Images\UserCabinet.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.7.25103.5738" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\AdminMode.png" />
+    <Resource Include="Images\Car.png" />
+    <Resource Include="Images\Registration.png" />
+    <Resource Include="Images\UserCabinet.png" />
+  </ItemGroup>
+
+</Project>

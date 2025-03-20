@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GIBDD.Model.Driver">
+    <Position X="9.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAGAAAAAAABAMAAAEAAAAAAQIAAAAgAIAEABBAAA=</HashCode>
+      <FileName>Model\Driver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GIBDD.Model.DriverLicense">
+    <Position X="12.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAADAEAECAAAhAAAAAgAAAhAAAAAAACAA=</HashCode>
+      <FileName>Model\DriverLicense.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+      <Property Name="Driver" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GIBDD.Model.EngineNumber">
+    <Position X="2.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAABAAAAEAAAACABCAAAAAAABAAAAgAAAAAA=</HashCode>
+      <FileName>Model\EngineNumber.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="VINNumber" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GIBDD.Model.User">
+    <Position X="8" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAgAAAAAAAACgAAQEAAAAAA=</HashCode>
+      <FileName>Model\User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DriverLicense" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GIBDD.Model.VINNumber">
+    <Position X="5.25" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAwBAAAEAAAABAAAEIgEAABAgAgABBCAA=</HashCode>
+      <FileName>Model\VINNumber.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EngineNumber" />
+      <Property Name="Driver" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
