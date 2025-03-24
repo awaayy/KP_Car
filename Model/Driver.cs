@@ -25,6 +25,7 @@ namespace GIBDD.Model
             FirstName = "Иван";
             SurName = "Иванов";
             Patronymic = "Иванович";
+            BirthDay = DateTime.Parse("01.01.1980"); 
             SeriesPassport = "1234";
             NumberPassport = "123456";
             City = "Москва";

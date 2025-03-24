@@ -40,13 +40,32 @@ namespace GIBDD.View
 		public AddCar()
 		{
 			InitializeComponent();
-			AddEngine.DataContext = EnginesViewModel;
-			EngineBox.ItemsSource = EnginesViewModel.Engines;
+            AddEngine.DataContext = EnginesViewModel;
+            EngineBox.ItemsSource = EnginesViewModel.Engines;
 			AddDriver.DataContext = DriversViewModel;
 			DriversBox.ItemsSource = DriversViewModel.Drivers;
 		}
 
-		private void Accept_Click(object sender, RoutedEventArgs e)
+        // Добавьте обработчик события на кнопку, которая будет открывать окно AddEngine
+        private void AddEngine_Click(object sender, RoutedEventArgs e)
+        {
+            // Создаем и открываем окно AddEngine
+            AddEngine addEngineWindow = new AddEngine();
+
+            // Показываем окно как модальное
+            bool? result = addEngineWindow.ShowDialog();
+
+            // После закрытия окна можно обработать результат, если необходимо
+            if (result == true)
+            {
+                // Обновляем список двигателей
+                EnginesViewModel.RefreshEngines();
+            }
+        }
+
+
+
+        private void Accept_Click(object sender, RoutedEventArgs e)
 		{
 			string ErrorMsg = string.Empty;
 			if (ColorBox.Text == null)

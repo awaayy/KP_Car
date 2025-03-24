@@ -22,7 +22,20 @@ namespace GIBDD.ViewModel
 			}
 		}
 
-		private ObservableCollection<EngineNumber> engines = new();
+        public void RefreshEngines()
+        {
+            // Очищаем текущую коллекцию двигателей
+            Engines.Clear();
+
+            // Загружаем новые данные из базы данных
+            foreach (var engine in App.context.EngineNumbers)
+            {
+                Engines.Add(engine);
+            }
+        }
+
+
+        private ObservableCollection<EngineNumber> engines = new();
 		public ObservableCollection<EngineNumber> Engines
 		{
 			get => engines;

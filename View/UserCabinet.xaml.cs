@@ -24,5 +24,7 @@ namespace GIBDD.View
 		{
 			InitializeComponent();
 		}
+
+
 	}
 }

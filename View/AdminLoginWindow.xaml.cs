@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GIBDD.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+
 
 namespace GIBDD.View
 {
@@ -43,6 +45,7 @@ namespace GIBDD.View
 			{
 				MessageBox.Show("Неверный логин или пароль!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
 			}
-		}
+
+        }
 	}
 }

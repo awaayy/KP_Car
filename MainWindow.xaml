@@ -28,7 +28,7 @@
                         <Setter Property="Width" Value="90"/>
                     </Style>
                 </DockPanel.Resources>
-                <Button x:Name="AdminMode" Background="Transparent" BorderThickness="0" Command="{Binding LoginAdmin}">
+                <Button x:Name="AdminMode" Background="Transparent" BorderThickness="0" Click="AdminMode_Click">
                     <Button.Content>
                         <Image Source="Images/AdminMode.png"/>
                     </Button.Content>
@@ -36,7 +36,7 @@
                         <ToolTip Content="Режим администратора"/>
                     </Button.ToolTip>
                 </Button>
-                <Button x:Name="UserCabinet" Background="Transparent" BorderThickness="0" Command="{Binding Authorization}">
+                <Button x:Name="UserCabinet" Background="Transparent" BorderThickness="0" Click="UserCabinet_Click">
                     <Button.Content>
                         <Image Source="Images/UserCabinet.png"/>
                     </Button.Content>
@@ -44,7 +44,7 @@
                         <ToolTip Content="Личный кабинет"/>
                     </Button.ToolTip>
                 </Button>
-                <Button x:Name="Registration" Background="Transparent" BorderThickness="0" Command="{Binding Registration}">
+                <Button x:Name="RegistrationButton" Background="Transparent" BorderThickness="0" Click="RegistrationButton_Click">
                     <Button.Content>
                         <Image Source="Images/Registration.png"/>
                     </Button.Content>
@@ -52,11 +52,12 @@
                         <ToolTip Content="Регистрация"/>
                     </Button.ToolTip>
                 </Button>
+
                 <Button Content="Сбросить"
                         Width="150"
                         Height="35"
                         Cursor="Hand"
-                        Command="{Binding Reset}"
+                        Click="Reset_Click"
                         HorizontalAlignment="Center"
                         Margin="0,10,0,0"/>
             </DockPanel>
@@ -84,19 +85,23 @@
                 <TextBlock Text="Идентификационный номер ТС (VIN)" Grid.Row="0" HorizontalAlignment="Center"/>
                 <Border Grid.Row="1" BorderBrush="Black" BorderThickness="2" Width="auto" HorizontalAlignment="Center">
                     <ext:MaskedTextBox FontSize="30" x:Name="VINField"
-                                       Text="{Binding SearchVIN, UpdateSourceTrigger=PropertyChanged}"
-                                       Mask=">C>C>C>C>C>C>C>C>C>C>C>C>C>C>C>C>C\" PromptChar=" " LostFocus="VINField_LostFocus"/>
+                   Text="{Binding SearchVIN, UpdateSourceTrigger=PropertyChanged}"
+                   Mask=">C>C>C>C>C>C>C>C>C>C>C>C>C>C>C>C>C" PromptChar=" "
+                   TextInput="VINField_TextInput"
+                   TextChanged="VINField_TextChanged"/>
+
                 </Border>
+
             </Grid>
         </Grid>
 
         <Grid Grid.Row="1">
             <Border BorderBrush="Black" BorderThickness="2" CornerRadius="25" Margin="5">
                 <Grid Margin="10">
-                    <ListBox BorderThickness="0" d:ItemsSource="{d:SampleData ItemCount=5}" 
+                    <ListBox BorderThickness="0" d:ItemsSource="{d:SampleData ItemCount=5}"
                              ItemsSource="{Binding CollectionView}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                              SelectedValue="{Binding SelectedCar}">
-                        
+
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
@@ -123,9 +128,9 @@
                         </ListBox.ItemsPanel>
                         <ListBox.ContextMenu>
                             <ContextMenu>
-                                <MenuItem Header="Добавить" Command="{Binding Add}" Visibility="{Binding Visibility}"/>
-                                <MenuItem Header="Удалить" Command="{Binding Delete}" Visibility="{Binding Visibility}"/>
-                                <MenuItem Header="Просмотр" Command="{Binding Watch}"/>
+                                <MenuItem Header="Добавить" Click="AddMenuItem_Click" Visibility="{Binding Visibility}"/>
+                                <MenuItem Header="Удалить" Click="DeleteMenuItem_Click" Visibility="{Binding Visibility}"/>
+                                <MenuItem Header="Просмотр" Click="ViewMenuItem_Click"/>
                             </ContextMenu>
                         </ListBox.ContextMenu>
                     </ListBox>
@@ -134,10 +139,10 @@
         </Grid>
 
         <DockPanel Grid.Row="2" HorizontalAlignment="Right">
-            <Button x:Name="Add" Content="Добавить" Margin="10" Width="150" Visibility="{Binding Visibility}" 
-                    Command="{Binding Add}"/>
+            <Button x:Name="Add" Content="Добавить" Margin="10" Width="150" Visibility="{Binding Visibility}"
+                    Click="AddButton_Click"/>
             <Button x:Name="Delete" Content="Удалить" Margin="10" Width="150" Visibility="{Binding Visibility}"
-                    Command="{Binding Delete}"/>
+                    Click="DeleteButton_Click"/>
         </DockPanel>
     </Grid>
 </Window>

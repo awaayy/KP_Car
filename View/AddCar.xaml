@@ -109,8 +109,11 @@
                                IsEditable="True" 
                                IsTextSearchEnabled="True" 
                                SelectedValue="{Binding EngineNumber}"/>
-                    <Button x:Name="AddEngine" Content="+" Margin="0" Width="30" FontSize="20" HorizontalAlignment="Right"
-                            Command="{Binding Add}"/>
+                    <Button x:Name="AddEngine" Content="+" Margin="0" Width="30" FontSize="20"
+        Click="AddEngine_Click"/>
+
+
+
                 </DockPanel>
             </DockPanel>
 
